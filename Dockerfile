@@ -8,7 +8,7 @@ ENV HOME /home/mlflowserver
 
 COPY ./requirements.txt .
 
-RUN mkdir -p ${HOME}/mlflow/mlruns &&\
+RUN mkdir -p ${HOME}/mlflow &&\
     pip install --upgrade pip &&\
     pip install -r requirements.txt &&\
     apt-get update &&\
