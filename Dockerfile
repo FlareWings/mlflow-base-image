@@ -4,7 +4,7 @@ ARG RUN_ID
 
 ARG MODEL_NAME
 
-ENV HOME /home/mlflowserver/mlruns
+ENV HOME /home/mlflowserver
 
 COPY ./requirements.txt /tmp
 
