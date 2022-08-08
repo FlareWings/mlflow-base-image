@@ -1,4 +1,4 @@
-FROM python:3.9-bullseye
+FROM python:3.9-slim-bullseye
 
 ARG RUN_ID
 
@@ -8,7 +8,7 @@ ENV HOME /home/mlflowserver/mlruns
 
 COPY ./requirements.txt /tmp
 
-RUN mkdir -p ${HOME}/mlflow &&\
+RUN mkdir -p ${HOME}/mlflow/mlruns &&\
     pip install --upgrade pip &&\
     pip install -r /tmp/requirements.txt &&\
     apt-get update &&\
